@@ -1,0 +1,53 @@
+.navbar {
+  padding-top: 10px
+}
+
+.mini-display {
+  opacity: 0;
+  padding-top: 8px;
+  font-size: 45px; 
+  color: white;
+  font-family: 'Syncopate', sans-serif;
+}
+
+@media (max-width: 1034px) {
+  .mini-display {
+    padding-top: 23px;
+    font-size: 20px;
+  }
+}
+
+.projects {
+  padding-top: 100px;
+  /*border: 1px solid black;*/
+}
+
+.project-box {
+  opacity: 0;
+  border: 1px solid white;
+  overflow: hidden;
+  height: 300px;
+  margin-top:20px;
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255,255,255, 0.6);
+}
+
+.project-title {
+  color: grey;
+  padding-top: 3px;
+  font-size: 35px;
+  font-family: 'Raleway';
+  border-bottom: 1px solid white;
+}
+
+.project-thumb {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+img {
+  border: 2px solid black;
+  height: 225px;
+  border-radius: 5px;
+}

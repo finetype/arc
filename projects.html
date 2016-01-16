@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Syncopate:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="ARC">
+    <meta name="author" content="kylebaker.io">
+    <title>ARC</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/projects.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="col-xs-4"> 
+        <p class="enter mini-display">ARC VISION</p>
+      </div>
+      <div class="col-xs-8 col-xs-offset-0 col-sm-8 col-sm-offset-0 col-md-8 col-md-offset-0 col-lg-4 col-lg-offset-1 ">
+        <ul class="navbar enter nav nav-pills">
+          <li><a class="leave" href="#">Home</a></li>
+          <li class="active"><a href="#">Projects</a></li>
+          <li><a class="leave" href="#">Contact</a></li>
+          <li><a class="leave" href="#">About</a></li>
+        </ul>
+      </div>
+      
+      <div class="container">
+        <div class="row">
+          <div class="projects col-lg-10 col-lg-offset-1 col-md-12">
+            <div class="enter project-box col-md-5 col-md-offset-0 col-xs-offset-2 col-xs-8">
+              <div class="col-xs-12 text-center project-title"> SVENSKA</div>
+              <div class="col-xs-12 project-thumb"> <img class="" src="./img/svenska1.jpg"/> </div>
+            </div>
+            <div class="enter project-box col-md-5 col-md-offset-2 col-xs-offset-2 col-xs-8">
+              <div class="col-xs-12 text-center project-title"> PARMER LANE</div>
+              <div class="col-xs-12 project-thumb"> <img class="" src="./img/svenska2.jpg"/> </div>
+            </div>
+
+            <div class="enter project-box col-md-5 col-md-offset-0 col-xs-offset-2 col-xs-8">
+              <div class="col-xs-12 text-center project-title"> RIVERSIDE</div>
+              <div class="col-xs-12 project-thumb"> <img class="" src="./img/svenska3.jpg"/> </div>
+            </div>
+            <div class="enter project-box col-md-5 col-md-offset-2 col-xs-offset-2 col-xs-8">
+              <div class="col-xs-12 text-center project-title"> EAST 15th</div>
+              <div class="col-xs-12 project-thumb"> <img class="" src="./img/svenska4.jpg"/> </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/velocity.js"></script>
+    <script src="js/velocity-ui.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('.enter').velocity('transition.flipYIn', {stagger: 100, delay: 500});
+
+        $('.leave').click(function(){
+          var enter = document.querySelectorAll('.enter')
+
+          $.Velocity(enter, 'transition.flipYOut', {stagger: 100, backwards: true})
+          .then(function(elem){
+            window.location = "file:///media/kajo/code/github/arcInvestments/index.html"
+          })
+        })
+      })
+    </script>
+  </body>
+</html>
