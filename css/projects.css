@@ -18,7 +18,7 @@
 }
 
 .projects {
-  padding-top: 100px;
+  padding-top: 30px;
   /*border: 1px solid black;*/
 }
 
@@ -50,4 +50,8 @@ img {
   border: 2px solid black;
   height: 225px;
   border-radius: 5px;
+}
+
+.nav-spacer {
+  height: 100px;
 }
