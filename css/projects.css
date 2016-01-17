@@ -17,12 +17,12 @@
   }
 }
 
-.projects {
+.project-thumbs {
   padding-top: 30px;
   /*border: 1px solid black;*/
 }
 
-.project-box {
+.project-mini-box {
   opacity: 0;
   border: 1px solid white;
   overflow: hidden;
@@ -47,11 +47,38 @@
 }
 
 img {
-  border: 2px solid black;
   height: 225px;
   border-radius: 5px;
 }
 
 .nav-spacer {
   height: 100px;
+}
+
+.project-box {
+  padding: 20px;
+  opacity: 0;
+  border: 1px solid white;
+  overflow: hidden;
+  margin-top:20px;
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255,255,255, 0.6);
+}
+
+.project-description {
+  padding-top: 10px;
+}
+
+.back-arrow {
+  height:50px;
+  width:50px;
+}
+
+.img-thumb {
+  border: 2px solid black;
+}
+
+.project-box {
+  display: none;
 }

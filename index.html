@@ -49,5 +49,20 @@
     <script src="js/index.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.main-display').velocity("slideDown", { duration: 1500 });
+        $('.nav').velocity({ opacity: '1'}, {delay: 1000 }, {duration: 2000});
+
+        $('.leave').click(function(){
+          var exit = document.querySelectorAll('.exit')
+
+          $.Velocity(exit, 'transition.flipYOut', {stagger: 250})
+          .then(function(elem){
+            window.location = "projects.html"
+          })
+        })
+      });
+    </script>
   </body>
 </html>
