@@ -58,11 +58,9 @@
 
           <div class="projects">
             <div class="project-box col-xs-12 EAST-15th">
-              <div class='row'>
+                            <div class='row'>
                 <div class="col-xs-1"><img class="back-arrow" src="img/back-arrow.png" title="Click here to go back to the project gallery"></img></div>
-              </div>
-              <div class='row'>
-                <div class="clearfix col-xs-12 text-center project-title"> EAST 15th</div>
+                <div class="col-xs-11 text-center project-title">EAST 15th</div>
               </div>
               <div class="row">
                 <div class="col-xs-3 project-thumb"> <img class="" src="./img/svenska4.jpg"/> </div>
@@ -80,9 +78,7 @@
             <div class="project-box col-xs-12 RIVERSIDE">
               <div class='row'>
                 <div class="col-xs-1"><img class="back-arrow" src="img/back-arrow.png" title="Click here to go back to the project gallery"></img></div>
-              </div>
-              <div class='row'>
-                <div class="clearfix col-xs-12 text-center project-title"> RIVERSIDE</div>
+                <div class="col-xs-11 text-center project-title">RIVERSIDE</div>
               </div>
               <div class="row">
                 <div class="col-xs-3 project-thumb"> <img class="" src="./img/svenska4.jpg"/> </div>
@@ -100,9 +96,7 @@
             <div class="project-box col-xs-12 PARMER-LANE">
               <div class='row'>
                 <div class="col-xs-1"><img class="back-arrow" src="img/back-arrow.png" title="Click here to go back to the project gallery"></img></div>
-              </div>
-              <div class='row'>
-                <div class="clearfix col-xs-12 text-center project-title"> PARMER-LANE</div>
+                <div class="col-xs-11 text-center project-title">PARMER-LANE</div>
               </div>
               <div class="row">
                 <div class="col-xs-3 project-thumb"> <img class="" src="./img/svenska4.jpg"/> </div>
@@ -120,9 +114,7 @@
             <div class="project-box col-xs-12 SVENSKA">
               <div class='row'>
                 <div class="col-xs-1"><img class="back-arrow" src="img/back-arrow.png" title="Click here to go back to the project gallery"></img></div>
-              </div>
-              <div class='row'>
-                <div class="clearfix col-xs-12 text-center project-title"> SVENSKA</div>
+                <div class="col-xs-11 text-center project-title">SVENSKA</div>
               </div>
               <div class="row">
                 <div class="col-xs-3 project-thumb"> <img class="" src="./img/svenska4.jpg"/> </div>
@@ -168,27 +160,30 @@
           })
         })
 
+        miniBoxes = document.querySelectorAll('.project-mini-box');
+
         $('.project-mini-box').click(function(e){
-          var thebox = this;
-          var project = thebox.querySelector('.project-title').innerHTML;
-          project = project.split(" ");
-          project = project.join("-");
-          project = "." + project;
-          console.log("showing: " + project);
+          var thisMiniBox = this;
+          var project     = thisMiniBox.querySelector('.project-title').innerHTML;
+          project         = "." + project.split(" ").join("-");
+          project         = document.querySelectorAll(project);
 
-          project   = document.querySelectorAll(project);
-          miniBoxes = document.querySelectorAll('.project-mini-box');
-
-          $.Velocity(miniBoxes, 'transition.flipYOut', {stagger: 100, delay: 500, reverse: true})
+          $.Velocity(miniBoxes, 'transition.flipYOut', {stagger: 100, reverse: true})
           .then(function(){
-            $.Velocity(project, 'transition.flipYIn', {stagger: 100, delay: 500});
+            
+            $.Velocity(project, 'transition.flipYIn', {stagger: 100});
+
             setInterval(function(){$('.back-arrow').velocity('callout.flash')}, 5000);
+
             $('.back-arrow').click(function(){
-              $.Velocity(project, 'transition.flipYOut', {stagger: 100, delay: 500})
+
+              $.Velocity(project, 'transition.flipYOut', {stagger: 100})
+              
               .then(function(){
-                $.Velocity(miniBoxes, 'transition.flipYIn', {stagger: 100, delay: 500})
+                $.Velocity(miniBoxes, 'transition.flipYIn', {stagger: 100})
               })
             })
+
           })
 
         })
