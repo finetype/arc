@@ -161,6 +161,10 @@
         })
 
         miniBoxes = document.querySelectorAll('.project-mini-box');
+        setInterval(function(){$('.back-arrow').velocity('callout.pulse')}, 5000);
+        $('.back-arrow').hover(function(){
+          $('.back-arrow').velocity('callout.tada')
+        })
 
         $('.project-mini-box').click(function(e){
           var thisMiniBox = this;
@@ -173,12 +177,11 @@
             
             $.Velocity(project, 'transition.flipYIn', {stagger: 100});
 
-            setInterval(function(){$('.back-arrow').velocity('callout.flash')}, 5000);
 
             $('.back-arrow').click(function(){
 
               $.Velocity(project, 'transition.flipYOut', {stagger: 100})
-              
+
               .then(function(){
                 $.Velocity(miniBoxes, 'transition.flipYIn', {stagger: 100})
               })
