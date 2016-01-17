@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     $.Velocity(exit, 'transition.flipYOut', {stagger: 250})
     .then(function(elem){
-      window.location = "file:///media/kajo/code/github/arcInvestments/projects.html"
+      window.location = "projects.html"
     })
   })
 });
