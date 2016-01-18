@@ -175,13 +175,12 @@
           $.Velocity(miniBoxes, 'transition.flipYOut', {stagger: 100, reverse: true})
           .then(function(){
             
-            $.Velocity(project, 'transition.flipYIn', {stagger: 100});
+            $.Velocity(project, 'transition.flipYIn');
 
 
             $('.back-arrow').click(function(){
-
+              $( ".back-arrow").unbind( "click" );
               $.Velocity(project, 'transition.flipYOut', {stagger: 100})
-
               .then(function(){
                 $.Velocity(miniBoxes, 'transition.flipYIn', {stagger: 100})
               })
