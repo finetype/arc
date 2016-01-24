@@ -37,16 +37,16 @@
   margin-top:20px;
   border-radius: 4px;
   box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255,255,255, 0.6);
-  transition: background-color 1s;
+  background-color: rgba(150,150,150, 0);
+  transition: background-color 1.1s;
 }
 
 .project-mini-box:hover {
-  background-color: rgba(255,255,255, 1);
+  background-color: rgba(255,255,255, 0.3);
 }
 
 .project-title {
-  color: grey;
+  color: white;
   padding-top: 3px;
   font-size: 35px;
   font-family: 'Raleway';
@@ -75,7 +75,7 @@ img {
   margin-top:20px;
   border-radius: 4px;
   box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255,255,255, 0.6);
+  background-color: rgba(147,147,147, .8);
 }
 
 .project-description {

@@ -4,7 +4,8 @@ html {
 
 body {
   background-image: url('../img/sunrise-crop-5.jpg');
-  /*background-size: 100%;*/
+  background-size: cover;
+  background-attachment: fixed;
   height: 100%;
   min-height: 100%;
 }
