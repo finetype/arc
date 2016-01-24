@@ -75,11 +75,11 @@ img {
   margin-top:20px;
   border-radius: 4px;
   box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
-  background-color: rgba(147,147,147, .8);
+  background-color: rgba(255,255,255, .3);
 }
 
 .project-description {
-  padding-top: 10px;
+  padding: 10px;
 }
 
 .back-arrow {
