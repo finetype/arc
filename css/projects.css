@@ -68,16 +68,22 @@ img {
 }
 
 .project-box {
+  color: white;
   padding: 20px;
+  font-family: 'Raleway';
   opacity: 0;
   border: 1px solid white;
   overflow: hidden;
-  margin-top:20px;
+  margin-top: 20px;
   border-radius: 4px;
   box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255,255,255, .3);
+  background-color: rgba(100,100,100, .35);
 }
 
+/*.project-box .project-title {
+  color: black;
+}
+*/
 .project-description {
   padding: 10px;
 }
