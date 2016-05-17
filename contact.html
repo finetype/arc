@@ -9,44 +9,113 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="ARC">
     <meta name="author" content="kylebaker.io">
-    <title>ARC</title>
+    <title>ARC | Contact</title>
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- Custom styles for this template -->
-    <link href="css/index.css" rel="stylesheet">
-    <link href="css/projects.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">    
+    <link href="css/projects.css" rel="stylesheet">    
   </head>
   <body>
-    <div class="site-wrapper">
-      <div class="col-xs-4"> 
-        <p class="enter mini-display">ARC VISION</p>
+     <div class="site-wrapper">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3"> 
+            <p class="enter mini-display">A<span class="the-r">R</span>C</p>
+          </div>
+        
+          <div class="col-xs-12 col-sm-8 col-sm-offset-0 col-md-8 col-md-offset-0 col-lg-4 col-lg-offset-1 ">
+            <ul class="navbar enter nav nav-pills">
+              <div class="row">
+                <div class="col-xs-3">
+                  <li>
+                    <a class="leave">Home</a>
+                  </li>
+                </div>
+                <div class="col-xs-3">
+                  <li>
+                    <a class="leave">Projects</a>
+                  </li>
+                </div>
+                <div class="col-xs-3">
+                  <li class="active">
+                    <a onclick="document.location.reload(true);"><b>Contact</b></a>
+                  </li>
+                </div>
+                <div class="col-xs-3">
+                  <li>
+                    <a class="leave">About</a>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+
+          <div class="row nav-spacer">
+          </div>
+
+          <div class="row nav-spacer">
+          </div>
+
+          <div class="text-center">
+            <div class="col-xs-10 col-xs-offset-1">
+              <p class="enter contact" align="center">
+                <b>Email:</b> info@arcinvesting.com<br/>
+                <b>Call:</b> (512)-354-2500<br/>
+                <b>Fax:</b> (800)-750-2189<br/>
+                <br/>
+                <b>Mail:</b><br/>
+                P.O. Box 431<br/>
+                Cedar Park, TX<br/>
+                78630
+              </p>
+            </div>
+          </div>
+
+          <div class="row nav-spacer">
+          </div>
+
+          <div class="row nav-spacer">
+          </div>
+
+        </div>
+
       </div>
-      <div class="col-xs-8 col-xs-offset-0 col-sm-8 col-sm-offset-0 col-md-8 col-md-offset-0 col-lg-4 col-lg-offset-1 ">
-        <ul class="navbar enter nav nav-pills">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a class="leave" href="#">Projects</a></li>
-          <li><a class="leave" href="#">Contact</a></li>
-          <li><a class="leave" href="#">About</a></li>
-        </ul>
-      </div>
-      
-      
     </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/velocity.js"></script>
-    <script src="js/velocity-ui.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/3.2.1/es6-promise.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- <script src="js/velocity-ui.js"></script> -->
+    <!-- <script src="js/velocity.js"></script> -->
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <!-- <script src="js/ie10-viewport-bug-workaround.js"></script> -->
     <script>
       $(document).ready(function(){
-        $('.enter').velocity('transition.flipYIn', {stagger: 100, delay: 500});
-      })
+        $('.enter').velocity('transition.slideLeftIn', {stagger: 100, delay: 500});
+        $('.nav').velocity({ opacity: '1'}, {delay: 1000 }, {duration: 2000});
+
+        $('.leave').click(function(e){
+          var clicked = e.currentTarget.innerHTML.toLowerCase();
+          var path = clicked === "home" ? "index" : clicked;
+          // path += ".html";
+          var enter = document.querySelectorAll('.enter');
+
+          $.Velocity(enter, 'transition.slideRightOut', {stagger: 250})
+          .then(function(elem){
+            $(window).unload(function(){}); //fix for firefox back button bug
+            window.location.href = path;
+          });
+        })
+      });
     </script>
   </body>
 </html>
