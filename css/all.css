@@ -15,6 +15,12 @@
   }
 }
 
+@media (max-width: 501px) {
+  body {
+    background-image: url('../img/mobile_background_4.jpg') !important;
+  }
+}
+
 body {
   background-image: url('../img/background1920x1080.jpg');
   background-size: cover;
