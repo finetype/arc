@@ -4,12 +4,34 @@ body {
 }
 
 @media (max-width: 500px) {
-
   .project-title {
-    font-size: 20px !important;
+    color: white;
+    padding-top: 3px;
+    font-size: 22px;
+    font-family: 'Raleway';
+    border-bottom: 1px solid white;
+  }
+}
+
+@media (min-width: 501px) {
+  .project-title {
+    color: white;
+    padding-top: 3px;
+    font-size: 35px;
+    font-family: 'Raleway';
+    border-bottom: 1px solid white;
   }
 
+  .project-title-small {
+    font-size: 27px !important;
+    padding: 9px;
+  }
 }
+
+.project-title.noline {
+  border-bottom: 0px solid white !important;
+}
+
 
 .minibox-group {
   padding-top: 30px;
@@ -35,22 +57,6 @@ body {
 
 .project-mini-box:hover {
   background-color: rgba(255,255,255, 0.3);
-}
-
-.project-title {
-  color: white;
-  padding-top: 3px;
-  font-size: 35px;
-  font-family: 'Raleway';
-  border-bottom: 1px solid white;
-}
-
-.project-title-long {
-  color: white;
-  padding-top: 3px;
-  font-size: 28px;
-  font-family: 'Raleway';
-  border-bottom: 1px solid white;
 }
 
 .project-thumb {
