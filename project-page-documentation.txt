@@ -9,12 +9,10 @@ given project's associated project-mini-box, as hidden. So, on screen load, ever
 
 On page load, everything is hidden until velocity reveals items which have the 'enter' class. (On the other hand, elements with the 'leave' class cause items with the 'enter' class to reverse animate.)
 
-items with the 'project-mini-box' class have click event listeners associated with them, so that all project-mini-boxes go through a fade-out transition, and then whatever text is in the 'project-title' class' .innterHTML is taken, and special characters that are not alphanumeric (like apostrophes, or unicode characters) are replaced with an underscore, spaces are replaced with hyphens, and then the result (after capitalizing the whole thing) is the expected class that corresponds with a 'project-box' that will then be revealed via an animation.
+items with the 'project-mini-box' class have click event listeners associated with them, so that all project-mini-boxes go through a fade-out transition, and then whatever text is in the 'project-title' class .innterHTML() is taken, and special characters that are not alphanumeric (like apostrophes, or unicode characters) are replaced with an underscore, spaces are replaced with hyphens, and then the result (after capitalizing the whole thing) is the expected class that corresponds with a 'project-box' that will then be revealed via an animation. (Therefore, give your project-box a class that corresponds with the process described above--see other project boxes and reread the paragraph as necessary)
 
-As a result, multiple projects with only differentiations of which special characters or capitalizations will collide and cause a bug. This is accepted. The odds of this are highly unlikely, and can be dealt with as necessary, if necessary. :)
+As a result, multiple projects that have only special characters or capitalizations as differences between them will collide and cause a bug. This is accepted. The odds of this are highly unlikely, and can be dealt with as necessary, if necessary. :)
 
-Also, make sure to name your classes appropriately.
+Going back to clicking on a minibox... at the same time, a listener is assigned to the back arrow so that when clicked, the current project slides out, and all 'project-mini-box' divs slide back in.
 
-Going back to clicking on a minibox... at the same time, a listener is assigned to the back arrow so that when clicked, the current project slides out, and all 'project-mini-box' divs slide in.
-
-Another comment: note that for the miniboxes, their offset is different for every other project. Projects on the left side of the page have an offset of 0, while projects on the right have an offset of 2 (to create space between the left and right columns). Adding a new project to the top usually means inverting all of the offsets for col-md.
+Another comment: note that for the miniboxes, their offset is different for every other project. Projects on the left side of the page have an offset of 0, while projects on the right have an offset of 2 (to create space between the left and right columns). Adding a new project to the top therefore requires inverting all of the offsets for col-md.
