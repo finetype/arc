@@ -213,3 +213,6 @@ h1 {
   display: none;
 }
 
+.sub-btn-1.active {
+  font-weight: bolder;
+}
