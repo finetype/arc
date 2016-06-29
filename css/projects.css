@@ -3,7 +3,7 @@ body {
   padding: 30px;
 }
 
-@media (min-width: 412px) and (max-width: 500px){
+@media (min-width: 412px) and (max-width: 528px){
   .project-title {
     color: white;
     padding-top: 3px;
@@ -13,7 +13,7 @@ body {
   }
 }
 
-@media (min-width: 501px) {
+@media (min-width: 529px) {
   .project-title {
     color: white;
     padding-top: 3px;
@@ -36,14 +36,20 @@ body {
     font-family: 'Raleway';
     border-bottom: 1px solid white;
   }
+  .project-title.noline {
+    font-size: 18px;
+    padding-top: 9px;
+  }
 
-/*  .project-title-small {
-    font-size: 27px !important;
-    padding: 9px;
-  }*/
+  .project-title-small.noline {
+    font-size: 15px;
+    padding-top: 0px;
+    padding-bottom: 3px;
+  }
 }
 
 .project-title.noline {
+  font-weight: bold;
   border-bottom: 0px solid white !important;
 }
 
