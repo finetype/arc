@@ -128,3 +128,31 @@ body {
   border: 2px solid white;
   border-radius: 7px;
 }
+
+.blackbox {
+  display: none;
+  background-color: rgba(50,50,50,.9);
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+  padding: 0px !important;
+  margin: 0px !important;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.blackbox-img {
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60%;
+  width: 60%;
+  left: 20%;
+  top: 20%;
+}
+
+.darker-background {
+
+}
