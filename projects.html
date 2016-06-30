@@ -19,7 +19,7 @@
   </head>
   <body>
     <div class="blackbox">
-      <img class="vertical-center blackbox-img"/>
+      <img class="blackbox-img"/>
     </div>
     <div class="site-wrapper">
 
@@ -370,9 +370,14 @@
           $('.blackbox-img').attr('src', clickedImageSrc);
           $('.blackbox').velocity("fadeIn", { duration: 500 });
           $(document.querySelector('.project-box')).velocity('fadeOut', {duration:500 });
+          $(document.querySelector('.mini-display')).velocity('fadeOut', {duration:500 });
+          $(document.querySelector('.navbar')).velocity('fadeOut', {duration:500 });
           $('.blackbox').click(function(event) {
+            $(".blackbox").unbind("click");
             $('.blackbox').velocity("fadeOut", { duration: 500 });
             $(document.querySelector('.project-box')).velocity('fadeIn', {duration:500 });
+            $(document.querySelector('.mini-display')).velocity('fadeIn', {duration:500 });
+            $(document.querySelector('.navbar')).velocity('fadeIn', {duration:500 });
           });
         });
 
@@ -417,7 +422,7 @@
             $('.project-box').addClass('enter');
             assignLeave();
             $('.back-arrow').click(function(){
-              $( ".back-arrow").unbind( "click" );
+              $(".back-arrow").unbind("click");
               $.Velocity(project, 'transition.slideRightOut', {stagger: 100})
               .then(function(){
                 $.Velocity(miniBoxes, 'transition.slideLeftIn', {stagger: 100})
