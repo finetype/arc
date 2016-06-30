@@ -156,3 +156,16 @@ body {
 .darker-background {
 
 }
+
+.hidden-link {
+  text-decoration: none !important;
+  border-left: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  color: white;
+}
+
+.hidden-link:hover {
+  color: white;
+  text-decoration: none;
+}
