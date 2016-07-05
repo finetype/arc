@@ -82,9 +82,7 @@ h1 {
 .nav>li>a:hover,
 .nav-pills>.row>div>li.active>a:focus, 
 .nav-pills>.row>div>li.active>a:hover {
-
   border: 4px solid white !important;
-
 }
 
 .enter {
