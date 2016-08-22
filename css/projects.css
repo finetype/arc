@@ -117,8 +117,8 @@ html {
 }
 
 .back-arrow {
-  height:50px;
-  width:50px;
+  height: 50px;
+  width: 50px;
 }
 
 .project-minibox-img {
@@ -149,15 +149,42 @@ html {
 }
 
 .blackbox-img {
-  max-width: 80%;
-  height:auto;
-  position: fixed;
-  top: 20%;
-  left: 10%;
-  border-radius:8px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
   border: 2px solid white;
 }
 
 .darker-background {
+  background-color: rgba(50,50,50,.9);
+}
 
+.blackbox-arrows {
+  font-size: 40px;
+  font-weight: bolder;
+  color: white;
+  margin-top: 27%;
+  /*background-color: rgba(70,70,70,1);*/
+}
+
+.blackbox-arrows:hover {
+  background-color: rgba(50,50,50,1);
+}
+
+.blackbox-contents {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .blackbox-arrows {
+    padding: 0 0 0 0;
+  }
+}
+
+@media (max-width: 397px) {
+  /* we'll be using swipe events 
+  only, presuming it's a mobile screen. */
+  .blackbox-arrows {
+    visibility: hidden;
+  }
 }

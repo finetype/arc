@@ -19,10 +19,26 @@
     <link href="css/absolute-center.css" rel="stylesheet">
   </head>
   <body>
-    <div class="blackbox">
-      <img class="blackbox-img Absolute-Center is-Image"/>
-    </div>
+
     <div class="site-wrapper">
+
+      <div class="blackbox">
+        <div class="blackbox-contents Absolute-Center is-Fixed" style="width:100%;">
+          <div class="container">
+            <div class="row">
+              <div class="blackbox-arrows col-xs-1">
+                ❬
+              </div>
+              <div class="col-xs-10">
+                <img class="blackbox-img"/>
+              </div>
+              <div class="blackbox-arrows col-xs-1">
+                ❭
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="container">
         <div class="row">
@@ -375,24 +391,29 @@
       $(document).ready(function(){
         $('.enter').velocity('transition.slideLeftIn', {stagger: 100, delay: 500});
 
+        // dynamic full screen centered image toggling by clicking on any image with the corresponding class.
         $('.blackbox-click').click(function(event) {
           var clickedImageSrc = event.target.currentSrc;
           console.log(event.target.currentSrc, $(event.target), event);
           // $(event.target).velocity("fadeIn", { duration: 1500 })
           $('.blackbox-img').attr('src', clickedImageSrc);
-          $('.blackbox').velocity("fadeIn", { duration: 500 });
-          $(document.querySelector('.project-box')).velocity('fadeOut', {duration:500 });
-          $(document.querySelector('.mini-display')).velocity('fadeOut', {duration:500 });
-          $(document.querySelector('.navbar')).velocity('fadeOut', {duration:500 });
+          $('.blackbox-contents').velocity("fadeIn", { duration: 500 });
+          $('.project-box').velocity('fadeOut', {duration:500 });
+          $('.mini-display').velocity('fadeOut', {duration:500 });
+          $('.navbar').velocity('fadeOut', {duration:500 });
+
           $('.blackbox').click(function(event) {
             $(".blackbox").unbind("click");
-            $('.blackbox').velocity("fadeOut", { duration: 500 });
-            $(document.querySelector('.project-box')).velocity('fadeIn', {duration:500 });
-            $(document.querySelector('.mini-display')).velocity('fadeIn', {duration:500 });
-            $(document.querySelector('.navbar')).velocity('fadeIn', {duration:500 });
+            // $('.blackbox').velocity("fadeOut", { duration: 500 });
+            $('.blackbox-contents').velocity("fadeOut", { duration: 500 });
+            $('.project-box').velocity('fadeIn', {duration:500 });
+            $('.mini-display').velocity('fadeIn', {duration:500 });
+            $('.navbar').velocity('fadeIn', {duration:500 });
           });
+
         });
 
+        // handles assigning divs that need to animate on page changes.
         var assignLeave = function assignLeave() {
           $('.leave').unbind();
           $('.leave').click(function(e){
@@ -414,12 +435,14 @@
 
         miniBoxes = document.querySelectorAll('.project-mini-box');
 
-        setInterval(function(){$('.back-arrow').velocity('callout.pulse')}, 5000);
+        // setInterval(function(){$('.back-arrow').velocity('callout.pulse')}, 5000);
 
         $('.back-arrow').hover(function(){
           $('.back-arrow').velocity('callout.tada')
         })
 
+        // handles transitions into individual projects detailed description pages,
+        // and coming back.
         $('.project-mini-box').click(function(e){
           var thisMiniBox = this;
           var project     = thisMiniBox.querySelector('.project-title').innerHTML;
@@ -432,8 +455,11 @@
           .then(function(){
             $.Velocity(project, 'transition.slideLeftIn');
             $('.project-box').addClass('enter');
+            $('.blackbox').velocity("fadeIn", { duration: 500 });
+            // $('body').addClass('darker-background');
             assignLeave();
             $('.back-arrow').click(function(){
+              $('.blackbox').velocity("fadeOut", { duration: 500 });
               $(".back-arrow").unbind("click");
               $.Velocity(project, 'transition.slideRightOut', {stagger: 100})
               .then(function(){
