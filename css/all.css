@@ -17,12 +17,22 @@
 
 @media (max-width: 501px) {
   body {
-    background-image: url('../img/mobile_background_4.jpg') !important;
+    background-color: cornflowerblue;
+    /*background-image: url('../img/mobile_background_4.jpg') !important;*/
+  }
+  
+  .project-box {
+    background-color: cornflowerblue !important;
+  }
+}
+
+@media (min-width: 552px) {
+  body {
+    background-image: url('../img/background1920x1080.jpg');
   }
 }
 
 body {
-  background-image: url('../img/background1920x1080.jpg');
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
