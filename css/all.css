@@ -17,13 +17,22 @@
 
 @media (max-width: 501px) {
   body {
-    background-color: cornflowerblue;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#52506b+9,6b655f+22,6b655f+22,6d5d4e+48,9b9b5e+68,f7ca2a+87,f2ed63+100 */
+    background: #52506b; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #52506b 9%, #6b655f 22%, #6b655f 22%, #6d5d4e 48%, #9b9b5e 68%, #f7ca2a 87%, #f2ed63 100%); /* FF3.6-15 */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(9%,#52506b), color-stop(22%,#6b655f), color-stop(22%,#6b655f), color-stop(48%,#6d5d4e), color-stop(68%,#9b9b5e), color-stop(87%,#f7ca2a), color-stop(100%,#f2ed63)); /* Chrome4-9,Safari4-5 */
+    background: -webkit-linear-gradient(-45deg,  #52506b 9%,#6b655f 22%,#6b655f 22%,#6d5d4e 48%,#9b9b5e 68%,#f7ca2a 87%,#f2ed63 100%); /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(-45deg,  #52506b 9%,#6b655f 22%,#6b655f 22%,#6d5d4e 48%,#9b9b5e 68%,#f7ca2a 87%,#f2ed63 100%); /* Opera 11.10-11.50 */
+    background: -ms-linear-gradient(-45deg,  #52506b 9%,#6b655f 22%,#6b655f 22%,#6d5d4e 48%,#9b9b5e 68%,#f7ca2a 87%,#f2ed63 100%); /* IE10 preview */
+    background: linear-gradient(135deg,  #52506b 9%,#6b655f 22%,#6b655f 22%,#6d5d4e 48%,#9b9b5e 68%,#f7ca2a 87%,#f2ed63 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52506b', endColorstr='#f2ed63',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
     /*background-image: url('../img/mobile_background_4.jpg') !important;*/
   }
   
-  .project-box {
-    background-color: cornflowerblue !important;
-  }
+/*   .project-box {
+  background-color: cornflowerblue !important;
+} */
 }
 
 @media (min-width: 552px) {
