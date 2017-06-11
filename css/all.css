@@ -35,11 +35,11 @@
     /* miniaturized background img that is a small piece of the desktop image, but doesn't work well on actual mobile devices in spite of seeming great on chrome's mobile emulator */
     /*background-image: url('../img/mobile_background_4.jpg') !important;*/
 
-    background-color: cornflowerblue;
+    background-color: #799c4a;
   }
   
      .project-box {
-    background-color: cornflowerblue !important;
+    background-color: #799c4a !important;
   } 
 }
 
